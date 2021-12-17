@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation 3</title>
+</head>
+<style>
+    * {
+        margin:0;
+        padding:0;
+        
+    }
+    body {
+       position: relative;
+       background-image: linear-gradient(90deg, whitesmoke, plum, rgb(250, 213, 219));
+       width:100%;
+       height:100vh;
+       font-family: sans-serif;
+    
+    }
+    .container {
+        position: absolute;
+        width: 500px;
+        height: 600px;
+        background-color: white ;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all;
+        transition-duration: 1s; 
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    }
+
+    .text{
+        font-size: 2rem;
+        top: 20%;
+        left: 20%;
+        line-height: 100px;
+        position:absolute;
+
+    }
+
+
+    .photo{
+        position: absolute;
+        width: 100%;
+        height:100%;
+        background-color:transparent;
+        transition: all;
+        transition-duration: 1s;
+        background-image: url(animations/images/lasr.jpeg);
+    }
+    
+    
+
+    .container:hover> .photo{
+       transform: translateX(50%) scale(50%);
+    }
+
+
+
+    </style>
+<body>
+    <div class="container">
+         <div class="text"> Happy Birthday Jin!</div>
+        <div class="photo"> </div>
+    </div>
+    
+</body>
+</html>
